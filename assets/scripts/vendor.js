@@ -35,8 +35,12 @@ function resetGame(value) {
   monsterHealthBar.value = value;
 }
 
-function removeBonusLife() {
-  bonusLifeEl.parentNode.removeChild(bonusLifeEl);
+function updateBonusLife(bool) {
+  if(!bool){
+    bonusLifeEl.style.display = 'none';
+  }else{
+    bonusLifeEl.style.display = 'inline';
+  }
 }
 
 function setPlayerHealth(health) {
